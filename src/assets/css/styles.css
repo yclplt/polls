@@ -1,0 +1,116 @@
+body{
+    background-color: #fcfcfc;
+}
+
+
+/*Start Container Atoms */
+.pl-container{
+     width: 70%;
+     padding: 0px 10px;
+     display: flex;
+     flex-direction: column;
+     margin: 30px auto;
+     background-color: #fcfcfc;
+}
+/* End Container Atoms */
+
+
+/*Start Text Atoms */
+.pl-text {
+     color: #2b3250;
+     background-color: transparent;
+}
+
+.pl-text.lg{
+     font-size: 35px;
+}
+.pl-text.md{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pl-text.left{
+     float: left;
+ }
+/* End Text Atoms */
+
+/*Start Badge Atoms */
+
+.pl-badge{
+    padding: 5px 10px;
+    color: #ffffff;
+    background-color: red;
+    border-radius: 7px;
+}
+/* End Badge Atoms */
+
+
+/*Start Button Atoms */
+  .pl-button {
+    color: #2b3250;
+    background-color: red;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .pl-button.primary{
+     width: 150px;
+     height: 35px;
+     border-radius: 6px;
+  }
+
+  .pl-button.right{
+     float: right;
+  }
+/* End Button Atoms */
+
+
+/*Start MainHeader molecules */
+.pl-main-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/*End MainHeader molecules */
+
+
+/*Start QuestionItem molecules */
+.pl-question-item{
+    height: 70px;
+    background-color: #ffffff;
+    width: 100%;
+    border: 1px solid #f9f9f9;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.pl-question-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*End QuestionItem molecules */
+
+
+
+/*Start HomePAge page */
+
+    .pl-homepage{
+        width: 70%;
+        padding: 0px 10px;
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto;
+        background-color: #fcfcfc;
+            
+    }
+/*End QuestionBox page */
