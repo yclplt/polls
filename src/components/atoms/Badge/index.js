@@ -1,12 +1,12 @@
 import React from 'react';
 const classNames = require('classnames');
 
-const Badge = ({label, position, type, color, size}) => {
+const Badge = ({label, position, type, color, size,onClick}) => {
     const className = classNames({
         'pl-badge': true,
     });
     return (
-     <div className={className}>{label}</div>
+     <div className={className} onClick={onClick}>{label}</div>
     );
 };
 

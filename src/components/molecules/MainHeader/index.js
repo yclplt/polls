@@ -1,5 +1,6 @@
 import React from 'react';
 import  { Text, Button} from './../../index';
+import Link from 'next/link'
 const classNames = require('classnames');
 
 const MainHeader = () => {
@@ -9,7 +10,9 @@ const MainHeader = () => {
     return (
         <div className={className}>
              <Text position="left" color="white" size="lg" label="Polls" />
-             <Button position="right" type="primary" label="Create Polls"></Button>
+             <Link href="/question-create">
+                 <Button position="right" type="primary" label="Create Polls" />
+             </Link>
         </div>
     );
 };
