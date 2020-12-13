@@ -1,12 +1,13 @@
-import  {HomePage} from '../../src/components';
-import axios from 'axios';
+import  {DetailPage} from '../../src/components';
 
 function questionDetail({question}) {
-  console.log(question)
   return (
-       <div>{question.question}</div>
+    <div className="pl-container">
+      <DetailPage data={question} />
+    </div>
   )
 }
+
 export async function getServerSideProps(context) {
   const {id} = context.query;
   const res = await fetch(`https://polls.apiblueprint.org/questions/${id}`)

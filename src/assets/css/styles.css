@@ -12,6 +12,12 @@ body{
      margin: 30px auto;
      background-color: #fcfcfc;
 }
+
+.pl-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /* End Container Atoms */
 
 
@@ -102,15 +108,42 @@ body{
 
 
 
+/*Start DetailHeader molecules */
+    
+
+/*End DetailHeader molecules */
+
+
+/*Start choise molecules */
+    .pl-choise-item{
+        width: 100%;
+        min-height: 40px;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #2b3250;
+        justify-content: space-between;
+    }
+
+/*End choise molecules */
+
 /*Start HomePAge page */
 
-    .pl-homepage{
-        width: 70%;
-        padding: 0px 10px;
-        display: flex;
-        flex-direction: column;
-        margin: 30px auto;
-        background-color: #fcfcfc;
-            
+    .pl-detail-header{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
     }
+   
 /*End QuestionBox page */
+
+
+/*Start Detail page */
+
+.pl-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+ 
+/*End Detail page */

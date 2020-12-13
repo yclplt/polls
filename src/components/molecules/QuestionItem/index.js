@@ -7,14 +7,13 @@ const QuestionItem = ({data}) => {
         'pl-question-item': true,
     });
 
-    const {question,published_at,choices,url } = data;
+    const {question,published_at,url } = data;
 
     return (
-        <Link href={url}>
-            <div className={className}>
+        <Link  href={url}>
+            <div  className={className}>
                 <div className="pl-question-row">
                     <Text position="left" color="white" size="md" label={question} />
-                    <Badge position="right" type="primary" label="100 Votes"></Badge>
                 </div>
                 <div className="pl-question-row">
                     <Text position="left" color="white" size="sm" label={published_at} />

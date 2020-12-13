@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 const classNames = require('classnames');
 
-const Button = ({ label, type,position}) => {
+const Button = ({ label, type,position,onClick}) => {
     const className = classNames({
          'pl-button': true,
          [type]: type,
          [position]: position
     });
     return (
-         <button className={className}>{label}</button>
+         <button onClick={onClick} className={className}>{label}</button>
     );
 };
 
