@@ -1,10 +1,10 @@
 import React from 'react';
 import  { Button} from '../../index';
 
-const DetailFooter = ({onClick}) => {
+const DetailFooter = ({onClick,visible}) => {
     return (
             <div className="pl-footer-header">
-                 <Button color="green" onClick={onClick} position="right"  size="sm" label="Send Vote" />
+                 <Button color="green" visible={visible&&"visible"} onClick={onClick} position="right"  size="sm" label="Send Vote" />
             </div>
     );
 };

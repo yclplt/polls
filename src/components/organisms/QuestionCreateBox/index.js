@@ -9,7 +9,7 @@ const QuestionCreateBox= ({choices,choiceTypeChange,addChoice,addPoll,choiceValu
                  return  <ChoiseItem key={key} deleteChoice={deleteChoice} data={{"choice": item}} />
               })
              }
-            <CreateFooter addPoll={addPoll} />
+            <CreateFooter visible={!choices.length>0 ? "visible": ""} addPoll={addPoll} />
         </div>
     );
 };

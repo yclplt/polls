@@ -1,11 +1,12 @@
 import React from 'react';
 import  { Text, Badge} from '../../index';
 import momet from 'moment'
-const DetailHeader = ({data}) => {
+import Link from 'next/link'
+const DetailHeader = ({data,voteStatus}) => {
     const {question, published_at} = data;
 
     let votesCount = 0;
-     data.choices.map(item => {
+    data.choices && data.choices.map(item => {
         if(item.votes> 0){
              votesCount +=item.votes;
         }
@@ -13,10 +14,13 @@ const DetailHeader = ({data}) => {
     let date = momet(published_at).fromNow();
     return (
          <div className="pl-detail-header">
+              <div className="pl-row h40">
+                <Link href="/"><Badge type="link" label="< Home Page" position="left"/></Link>
+             </div>
              <Text position="left" color="white" size="lg" label={question} />
-             <div className="pl-row">
+             <div className="pl-row h40">
                  <Text position="left" color="white" size="sm" label={date} />
-                 <Badge position="right" label={`votes ${votesCount}`} />
+                 <Badge color="purple" position="right" label={`votes ${voteStatus ? votesCount + 1 : votesCount}`} />
              </div>
          </div>
     );

@@ -4,7 +4,7 @@ import  {DetailHeader , ChoiseItem, DetailFooter } from './../../index';
 const QuestionDetail= ({data, selectedChoise, selectChoice, sendVote,isVote}) => { 
     return (
         <div className="pl-question-box">
-             <DetailHeader data={data} />
+             <DetailHeader voteStatus={isVote} data={data} />
              {data.choices && data.choices.map((item,key) => {
                  return  <ChoiseItem key={key} selected={selectedChoise?.choice === item.choice} voteStatus={isVote} onClick={()=>selectChoice(item)} data={item} />
               })
