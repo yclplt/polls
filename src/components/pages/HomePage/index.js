@@ -2,12 +2,7 @@ import React, { useEffect,useState } from 'react';
 import  { QuestionBox} from '../../index';
 import axios from 'axios';
 
-const classNames = require('classnames');
-
 const HomePage = () => {
-    const className = classNames({
-        'pl-homepage': true,
-    });
 
     const [questionList, setQuestionList] = useState([]);
 
@@ -19,7 +14,7 @@ const HomePage = () => {
     }, [])
 
     return (
-        <div className={className}>
+        <div className="pl-homepage">
              <QuestionBox data={questionList} />
         </div>
     );

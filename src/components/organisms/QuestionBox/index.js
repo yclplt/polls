@@ -1,14 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import  {QuestionItem , MainHeader} from './../../index';
-const classNames = require('classnames');
 
 const QuestionBox= ({data}) => {
-    const className = classNames({
-        'pl-question-box': true,
-    });
-
     return (
-        <div className={className}>
+        <div className="pl-question-box">
              <MainHeader />
              {data && data.map( (item,key) => {
                    return <QuestionItem key={key} data={item} />

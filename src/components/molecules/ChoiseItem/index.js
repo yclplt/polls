@@ -1,21 +1,17 @@
 import React from 'react';
 import  { Text, Badge} from './../../index';
-const classNames = require('classnames');
 
-const ChoiseItem = ({data , onClick, voteStatus,deleteChoice}) => {
-    const className = classNames({
-        'pl-choise-item': true,
-    });
+const ChoiseItem = ({data , onClick, voteStatus=true,deleteChoice,selected}) => {
+
     const {choice,votes } = data;
-
+  
     return (
-         <div className={className} onClick={!voteStatus?onClick:null}>
-           {!voteStatus && (
+         <div className={`pl-choise-item ${selected?"selected":""}`} onClick={!voteStatus?onClick:null}>
+           {!voteStatus &&
                <>
                  <Text position="left" color="white" size="md" label={choice} />
                  <Badge label="Delete" onClick={val=>deleteChoice(choice)}  />
                </> 
-                 )
             }
            {voteStatus && 
                 <>

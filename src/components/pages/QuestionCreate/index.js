@@ -28,7 +28,6 @@ const QuestionCreate = () => {
     }
     
     const createPoll= () =>{
-        console.log(choice.length)
         if(choice.length > 1){
             let data = JSON.stringify({
                 question: questionText,
@@ -53,7 +52,7 @@ const QuestionCreate = () => {
 
     return (
         <div className="pl-question-create">
-           {isCreated ?  <QuestionCreateBox 
+           {!isCreated ?  <QuestionCreateBox 
                  question={questionText}
                  questionTypeChange={val => setQuestionText(val)}
                  deleteChoice={val=>deleteChoice(val)}

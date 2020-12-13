@@ -1,14 +1,10 @@
 import React from 'react';
-import  { Button, Badge} from '../../index';
-const classNames = require('classnames');
+import  { Button} from '../../index';
 
-const DetailFooter = ({data,onClick}) => {
-    const className = classNames({
-        'pl-footer-header': true,
-    });
+const DetailFooter = ({onClick}) => {
     return (
-            <div className={className}>
-                 <Button onClick={onClick} position="right" color="white" size="sm" label="Send Vote" />
+            <div className="pl-footer-header">
+                 <Button color="green" onClick={onClick} position="right"  size="sm" label="Send Vote" />
             </div>
     );
 };

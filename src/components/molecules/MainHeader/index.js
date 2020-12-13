@@ -11,7 +11,7 @@ const MainHeader = () => {
         <div className={className}>
              <Text position="left" color="white" size="lg" label="Polls" />
              <Link href="/question-create">
-                 <Button position="right" type="primary" label="Create Polls" />
+                 <Button color="green" position="right" type="primary" label="Create Polls" />
              </Link>
         </div>
     );

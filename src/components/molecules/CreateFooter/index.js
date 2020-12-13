@@ -1,14 +1,10 @@
 import React from 'react';
 import  { Button} from './../../index';
-const classNames = require('classnames');
 
-const CreateFooter = ({addPoll,addChoice}) => {
-    const className = classNames({
-        'pl-main-footer': true,
-    });
+const CreateFooter = ({addPoll}) => {
     return (
-        <div className={className}>
-             <Button onClick={addPoll} position="right" color="white" size="sm" label="Create Poll" />
+        <div className="pl-main-footer">
+             <Button onClick={addPoll} color="green" position="right" color="white" size="sm" label="Create Poll" />
         </div>
     );
 };

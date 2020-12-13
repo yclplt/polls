@@ -1,20 +1,24 @@
 import React from 'react';
 import  { Text, Badge} from '../../index';
-const classNames = require('classnames');
-
+import momet from 'moment'
 const DetailHeader = ({data}) => {
-    const className = classNames({
-        'pl-detail-header': true,
-    });
-    return (
-            <div className={className}>
-                <Text position="left" color="white" size="lg" label="Which Framework do you like most?" />
-                <div className="pl-row">
-                    <Text position="left" color="white" size="sm" label="3 Hours Ago" />
-                    <Badge position="right" label="vote 2" />
-                </div>
-            </div>
+    const {question, published_at} = data;
 
+    let votesCount = 0;
+     data.choices.map(item => {
+        if(item.votes> 0){
+             votesCount +=item.votes;
+        }
+    })
+    let date = momet(published_at).fromNow();
+    return (
+         <div className="pl-detail-header">
+             <Text position="left" color="white" size="lg" label={question} />
+             <div className="pl-row">
+                 <Text position="left" color="white" size="sm" label={date} />
+                 <Badge position="right" label={`votes ${votesCount}`} />
+             </div>
+         </div>
     );
 };
 
