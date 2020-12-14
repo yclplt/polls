@@ -1,5 +1,5 @@
 import React from 'react';
-import  { Text, Button} from './../../index';
+import  { Text,TextProps,  Button, ButtonProps} from './../../index';
 import Link from 'next/link'
 const classNames = require('classnames');
 
@@ -9,9 +9,9 @@ const MainHeader = () => {
     });
     return (
         <div className={className}>
-             <Text position="left" color="white" size="lg" label="Polls" />
+             <Text position={TextProps.position.left}  size={TextProps.size.lg} label="Polls" />
              <Link href="/question-create">
-                 <Button color="green" position="right" type="primary" label="Create Polls" />
+                 <Button color={ButtonProps.color.green}  position={ButtonProps.position.right} type={ButtonProps.color.primary}  label="Create Polls" />
              </Link>
         </div>
     );

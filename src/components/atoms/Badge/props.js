@@ -1,8 +1,8 @@
-const ButtonProps = {
+const BadgeProps = {
     size: {xs: 'xs', sm: 'sm', md: 'md', lg: 'lg', xl: 'xl'},
     position: {left: 'left', right: 'right', top: 'top', bottom: 'bottom'},
-    color: {green: 'green'},
-    type: {primary: 'primary', secondary: 'secondary'}
+    color: {red: 'red', green: 'green', purple: 'purple'},
+    type: {link: 'link'}
   };
 
-export default ButtonProps;
+export default BadgeProps;

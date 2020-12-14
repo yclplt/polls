@@ -1,5 +1,5 @@
 import React from 'react';
-import  { Text, Badge} from '../../index';
+import  { Text, TextProps, Badge, BadgeProps} from '../../index';
 import momet from 'moment'
 import Link from 'next/link'
 const DetailHeader = ({data,voteStatus}) => {
@@ -15,12 +15,12 @@ const DetailHeader = ({data,voteStatus}) => {
     return (
          <div className="pl-detail-header">
               <div className="pl-row h40">
-                <Link href="/"><Badge type="link" label="< Home Page" position="left"/></Link>
+                <Link href="/"><Badge type={BadgeProps.type.link}  label="< Home Page" position={BadgeProps.position.left} /></Link>
              </div>
-             <Text position="left" color="white" size="lg" label={question} />
+             <Text position={TextProps.position.left} size="lg" label={question} />
              <div className="pl-row h40">
-                 <Text position="left" color="white" size="sm" label={date} />
-                 <Badge color="purple" position="right" label={`votes ${voteStatus ? votesCount + 1 : votesCount}`} />
+                 <Text position={TextProps.position.left} size={TextProps.size.sm} label={date} />
+                 <Badge color={BadgeProps.color.purple} position={BadgeProps.position.right} label={`votes ${voteStatus ? votesCount + 1 : votesCount}`} />
              </div>
          </div>
     );

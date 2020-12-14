@@ -20,6 +20,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 /* End Container Atoms */
 
@@ -121,6 +122,7 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 /*End MainHeader molecules */
@@ -128,7 +130,8 @@ body{
 
 /*Start QuestionItem molecules */
 .pl-question-item{
-    height: 70px;
+    min-height: 70px;
+    height: auto;
     background-color: #ffffff;
     border: 1px solid #f9f9f9;
     cursor: pointer;
@@ -222,7 +225,7 @@ body{
 }
 
 .w100>textarea{
-    width: 100%;
+    flex-grow: 1;
     margin-right: 15px;
 }
 
