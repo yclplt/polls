@@ -22,13 +22,13 @@ Badge.propTypes = {
     label: PropTypes.string.isRequired,
     position: PropTypes.oneOf([BadgeProps.position.bottom, BadgeProps.position.top, BadgeProps.position.left, BadgeProps.position.right]),
     size: PropTypes.oneOf([BadgeProps.size.xs, BadgeProps.size.sm, BadgeProps.size.md, BadgeProps.size.lg, BadgeProps.size.xl]),
-    type: PropTypes.string,
+    type:  PropTypes.oneOf([BadgeProps.color.link,BadgeProps.color.default]),
     color: PropTypes.oneOf([BadgeProps.color.red, BadgeProps.color.purple, BadgeProps.position.green])
 };
 Badge.defaultProps = {
     position: BadgeProps.position.left,
     size: BadgeProps.size.lg,
-    type: 'primary',
+    type: BadgeProps.type.default,
 };
 
 export default Badge;

@@ -6,7 +6,9 @@ const CreateHeader = ({choiceValue,choiceTypeChange,addChoice,question, question
     return (
         <div className="pl-create-header">
              <div className="pl-row h40">
-                <Link href="/"><Badge type={BadgeProps.type.link} label="< Home Page" position={BadgeProps.position.left} /></Link>
+                <Link href="/">
+                     <Badge type={BadgeProps.type.link} label="< Home Page" position={BadgeProps.position.left} />
+                 </Link>
              </div>
              <Text position={TextProps.position.left} size={TextProps.size.lg} label="Create Poll" />
              <div className="h40">

@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import  {QuestionCreateBox} from '../../index';
 import axios from 'axios';
+import Router from 'next/router'
 
 const QuestionCreate = () => {
     
@@ -39,8 +40,12 @@ const QuestionCreate = () => {
                 }
             })
             .then(res => {
-                if(res.status === 201 &&  res.status==="Created"){
+                console.log("red",res)
+                if((res.status === 200 && res.statusText==="OK") || (res.status === 201 && res.statusText==="Created") ){
                     setIsCreated(true);
+                    setTimeout(() => {
+                        Router.push('/')
+                    }, 1000);
                 }else{
                     alert("There was an error, Please try again.")
                 }
