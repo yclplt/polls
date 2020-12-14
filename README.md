@@ -1,5 +1,5 @@
 # polls
-[Online Preview](https://polls-nine.vercel.app/, "Online Preview")
+[Online Preview](https://polls-nine.vercel.app "Online Preview")
 
 # How the install
 ```
