@@ -1,5 +1,4 @@
 # polls
-- [Online Preview Vercel](https://polls.yclplt.vercel.app/ "Online Preview vercel")
 - [Online Preview Heroku](https://marvel-movie-character.herokuapp.com// "Online Preview Heroku")
 
 # How the install
